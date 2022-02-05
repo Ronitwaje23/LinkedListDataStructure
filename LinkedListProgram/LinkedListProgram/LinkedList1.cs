@@ -8,15 +8,13 @@ namespace LinkedListProgram
 {
     internal class LinkedList1
     {
-        
-        internal Node head;
+
+        internal Node head; //new
         internal void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
-            {
                 this.head = node;
-            }
             else
             {
                 Node temp = head;
@@ -26,38 +24,39 @@ namespace LinkedListProgram
                 }
                 temp.next = node;
             }
-            Console.Write("\n {0} inserted into linked list", node.data);
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+
         }
-        public void AddinreverseOrder(int data)
+        internal void AddFirst(int data)
         {
-            Node newNode = new Node(data);
+            Node node = new Node(data);
             if (this.head == null)
-            {
-                this.head = newNode;
-            }
+                this.head = node;
             else
             {
-                Node temp = this.head;
-                head = newNode;
-                head.next = temp;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
-            Console.Write("\n {0} inserted into linked list", newNode.data);
+            Console.WriteLine("{0} inserted into the Append linked list", node.data);
         }
         internal void Display()
         {
-            Console.Write("\n Data of linked list : ");
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is empty");
+                Console.WriteLine("\nLinked list is empty");
                 return;
             }
-
             while (temp != null)
             {
                 Console.Write(temp.data + " ");
-                temp = temp.next;
+                temp = temp.next; //temp=null
             }
+            Console.WriteLine("\n");
         }
     }
 }
