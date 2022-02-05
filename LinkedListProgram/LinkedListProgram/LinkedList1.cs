@@ -8,7 +8,6 @@ namespace LinkedListProgram
 {
     internal class LinkedList1
     {
-
         internal Node head;
         internal void Add(int data)
         {
