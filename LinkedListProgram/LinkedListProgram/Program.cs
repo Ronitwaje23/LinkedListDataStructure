@@ -9,29 +9,21 @@ namespace LinkedListProgram
     internal class Program
     {
         
-        
         static void Main(string[] args)
          {
             Console.WriteLine("Welcome to Linked List");
-            LinkedList1 list = new LinkedList1();
-            list.Add(56);
-            //list.Add(30);
-            list.Add(70);
-            list.InsertAtParticularPosition(2, 30);
-            LinkedList1 list2 = new LinkedList1();
-            //Appends the Nodes
-            list2.AddFirst(56);
-            list2.AddFirst(30);
-            list2.AddFirst(70);
-            list2.Display();
-            Console.ReadKey();
-            list.Display();
+
+            LinkedList1 linkedlist = new LinkedList1();
+            linkedlist.Add(56);
+            linkedlist.Add(30);
+            linkedlist.Add(70);
+            linkedlist.RemoveLastNode();
+            linkedlist.Display();
             Console.ReadLine();
         }
-
-
     }
 }
+
 
 
 
